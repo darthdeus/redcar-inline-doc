@@ -29,7 +29,7 @@ module Redcar
       def execute
         offset = doc.cursor_offset
         word = doc.word_at_offset(offset)
-        Application::Dialog.message_box("the word is '#{word}'")
+        Application::Dialog.popup_text(word, `ri -T -f simple #{word}`, :cursor)
       end
     end
     
