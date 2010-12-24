@@ -11,11 +11,8 @@ module Redcar
       
       [linwin, osx]
     end            
-    
-        # This method is run as Redcar is booting up.
+           
     def self.menus
-      # Here's how the plugin menus are drawn. Try adding more
-      # items or sub_menus.
       Menu::Builder.build do
         sub_menu "Plugins" do
           sub_menu "Inline Documentation", :priority => 139 do
