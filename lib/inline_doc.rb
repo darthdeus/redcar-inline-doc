@@ -3,15 +3,14 @@ module Redcar
    
     def self.keymaps
       linwin = Redcar::Keymap.build "main", [:linux, :windows] do
-        link "Ctrl+Alt+L", ShowDocumentationCommand
+        link "Ctrl+Alt+Q", ShowDocumentationCommand
       end
       osx = Redcar::Keymap.build "main", :osx do
-        link "Cmd+Alt+L", ShowDocumentationCommand
-      end      
-      
+        link "Cmd+Alt+Q", ShowDocumentationCommand
+      end          
       [linwin, osx]
     end            
-           
+    
     def self.menus
       Menu::Builder.build do
         sub_menu "Plugins" do
