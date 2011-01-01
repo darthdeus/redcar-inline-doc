@@ -22,6 +22,9 @@ module Redcar
     end
     
     class ShowDocumentationCommand < Redcar::EditTabCommand
+      
+      # @todo Read current line and see if it is class method,
+      # in which case invoke ri on the class
       def execute
         offset = doc.cursor_offset
         word = doc.word_at_offset(offset)
